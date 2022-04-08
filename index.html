@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"
+        integrity="sha512-IM60GPudO4jk+ZQm3UlJgKHhXQi5pNDM6mP+pLKL968YgkHMc7He3aGJOVHEZ9rJ4vAaEtJ8W6SKa7Qq4inzBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/pdftron/lib/webviewer.min.js"></script>
+    <script src="./assets/pdftron/samples/old-browser-checker.js"></script>
+    <script src="./assets/pdftron/samples/global.js"></script>
+    <script src="./assets/pdftron/samples/modernizr.custom.min.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main">
+        <header id="header" class="container-fluid">
+            <div class="container">
+                <div class="navbar navbar-expand-md">
+                    <a href="#" class="navbar-brand">
+                        <img src="http://mozilla.github.io/pdf.js/images/logo.svg" alt="logo PDF.js" width="42px"
+                            height="42px" />
+                    </a>
+
+                    <button class="navbar-toggler bd-dark" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="navbar-item active">
+                                <a href="" class="navbar-link">Home</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="navbar-link">Getting Started</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="navbar-link">Exambles</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="navbar-link">FAQ</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="" class="navbar-link">API</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <div id="contentWraper" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="heading-one text-center">PDF.js</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="desc text-center">A general-purpose, web standards-based platform for parsing and
+                        rendering PDFs.</p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-0 col-lg-3 "></div>
+                <div class="col-6 col-lg-3 read-file-btn">
+                    <input type="submit" value="Submit" />
+                </div>
+                <div class="col-6 col-lg-3">
+                    <button type="button" class="btn search-btn">Search</button>
+                </div>
+                <div class="col-0 col-lg-3"></div>
+            </div>
+
+            <!-- PDF content -->
+            <div class="row" id="pdf-search">
+                <div class="col-12" style="margin-bottom:100px;">
+                    <aside>
+                        <input id="text" type="text" value="Search..." class="form-control" style="font-size: 1.6rem" />
+                        <br />
+                        <h2>Applied pages:</h2>
+                        <div id="pages" class="d-flex flex-fill"></div>
+                        <hr />
+                    </aside>
+                    <div id="viewer"></div>
+                    <script src="./assets/pdftron/samples/menu-button.js"></script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div id='pdf-viewer'></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p>©Mozilla and individual contributors</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>PDF.js is licensed under <a href="">Apache</a>, documentation is licensed under <a href="">CC
+                            BY-SA
+                            2.5</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <script>
+        Modernizr.addTest('async', function () {
+            try {
+                var result;
+                eval('let a = () => {result = "success"}; let b = async () => {await a()}; b()');
+                return result === 'success';
+            } catch (e) {
+                return false;
+            }
+        });
+    </script>
+
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/hightlight.js"></script>
+    <script src="./assets/js/hightlight.js"></script>
+</body>
+
+</html>
